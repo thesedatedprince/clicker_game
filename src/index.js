@@ -6,10 +6,13 @@ import counter from './reducers'
 
 const store = createStore(counter)
 
+
 const render = () => ReactDOM.render(
   <Counter
     value={store.getState()}
-    increment={() => store.dispatch({type: 'INCREMENT'})}/>,
+    increment={() => store.dispatch({type: 'INCREMENT'})}
+    second_level={() => store.dispatch({type: 'SECOND_LEVEL'})}
+    third_level={() => store.dispatch({type: 'THIRD_LEVEL'})}/>,
   document.getElementById('root')
 );
 
