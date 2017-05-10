@@ -3,7 +3,7 @@ import React, {Component} from 'react'
 class Counter extends Component{
 
   unlock(value, check, level){
-    if(value >= check){
+    if(value <= check){
       return level
     }
   }
@@ -17,10 +17,10 @@ class Counter extends Component{
           <button onClick={increment}>
             Click
           </button>
-          <button onClick={this.unlock(value, 5, second_level)}>
+          <button onClick={this.unlock(value, 80, second_level)}>
             Mega Click
           </button>
-          <button onClick={this.unlock(value, 20, third_level)}>
+          <button onClick={this.unlock(value, 50, third_level)}>
             Giga Click
           </button>
       </p>
