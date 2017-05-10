@@ -18,8 +18,6 @@ export default (state = 100, action) => {
       } else {
         return state = 0
       }
-    case 'SET_ZERO':
-      return state = 0
     default:
       return state
   }

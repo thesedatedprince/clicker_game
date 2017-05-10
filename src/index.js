@@ -1,11 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {createStore} from 'redux'
-import Counter from './components/Counter'
+import Attack from './components/Attack'
 import counter from './reducers/counter'
 import HealthBar from './components/HealthBar'
 import Winner from './components/Winner'
 import '../public/css/HealthBar.css'
+import '../public/css/Attack.css'
 
 const store = createStore(counter)
 
@@ -14,7 +15,7 @@ const render = () => ReactDOM.render(
   <div>
   <HealthBar
     totalHealth={store.getState()}/>
-  <Counter
+  <Attack
     value={store.getState()}
     increment={() => store.dispatch({type: 'INCREMENT'})}
     second_level={() => store.dispatch({type: 'SECOND_LEVEL'})}
