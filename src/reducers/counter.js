@@ -1,11 +1,23 @@
 export default (state = 100, action) => {
   switch(action.type) {
     case 'INCREMENT':
-      return state - 1
+      if(state - 1 > 0 ){
+        return state - 1
+      } else {
+        return state = 0
+      }
     case 'SECOND_LEVEL':
-      return state - 5
+      if(state - 5 > 0 ){
+        return state - 5
+      } else {
+        return state = 0
+      }
     case 'THIRD_LEVEL':
-      return state - 20
+      if(state - 20 > 0 ){
+        return state - 20
+      } else {
+        return state = 0
+      }
     case 'SET_ZERO':
       return state = 0
     default:
